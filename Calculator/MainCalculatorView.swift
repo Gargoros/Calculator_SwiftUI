@@ -13,14 +13,32 @@ struct MainCalculatorView: View {
     @State var currentComputation: String = ""
     @State var mainResult: String = "0"
     
+    var colorScheme: ColorScheme {
+        return lightMode ? .light : .dark
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            BackgroundColorView()
+            VStack{
+                HStack() {
+                    LightDartModeButtonView(lightMode: $lightMode)
+                    Spacer()
+                }
+                HStack {
+                    Spacer()
+                    ComputationView(
+                        currentComputation: currentComputation,
+                        mainResult: mainResult
+                    )
+                }
+                CalcButtonsView(
+                    currentComputation: $currentComputation,
+                    mainResult: $mainResult)
+                Spacer()
+            }
         }
-        .padding()
+        .environment(\.colorScheme, colorScheme)
     }
 }
 
