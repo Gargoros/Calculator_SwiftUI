@@ -9,17 +9,26 @@ import SwiftUI
 
 struct ButtonView: View {
     
-    let buttonWidthSize1: CGFloat
-    let buttonWidthSize2: CGFloat
-    let buttonHeightSize1: CGFloat
-    let buttonHeightSize2: CGFloat
+    let buttonSize1: CGFloat
+    let buttonSize2: CGFloat
     
     let symbolSize: CGFloat
     
     let color1: Color
     let color2: Color
     
-    let buttonSymbol: String
+    let buttonSymbol: CalcButton
+    
+    var systemImage: String? {
+        let value: String = buttonSymbol.rawValue
+        return value.contains("IMG") ? value.replacingOccurrences(
+            of: "IMG",
+            with: "") : nil
+    }
+    var text: String? {
+        let value: String = buttonSymbol.rawValue
+        return value.contains("IMG") ? nil : value
+    }
     
     
     
@@ -27,7 +36,7 @@ struct ButtonView: View {
         ZStack {
             Rectangle()
               .foregroundColor(.clear)
-              .frame(width: buttonWidthSize1, height: buttonHeightSize1)
+              .frame(width: buttonSize1, height: buttonSize1)
               .background(
                 LinearGradient(
                     colors: [color2, color1],
@@ -35,6 +44,7 @@ struct ButtonView: View {
                     endPoint: .bottomTrailing)
               )
               .clipShape(RoundedRectangle(cornerRadius: 23))
+              .shadow(color: shadowColor, radius: 6, x: 0, y: 3)
             Rectangle()
                 .fill(
                     LinearGradient(
@@ -42,14 +52,18 @@ struct ButtonView: View {
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing)
                 )
-                .frame(width: buttonWidthSize2, height: buttonHeightSize2)
+                .frame(width: buttonSize2, height: buttonSize2)
                 .clipShape(RoundedRectangle(cornerRadius: 23))
                 .padding()
             
-            Text(buttonSymbol)
+            Text(text ?? "")
                 .font(.system(size: symbolSize))
                 .foregroundStyle(buttonTextColor)
                 .multilineTextAlignment(.center)
+            Image(systemName: systemImage ?? "")
+                .resizable()
+                .frame(width: symbolSize, height: symbolSize)
+                .foregroundStyle(buttonTextColor)
             
         }
     }
@@ -62,17 +76,17 @@ struct ButtonView: View {
             startPoint: .top,
             endPoint: .bottom)
             .ignoresSafeArea()
+        HStack(spacing: -10){
+            ButtonView(
+                buttonSize1: buttonSize1,
+                buttonSize2: buttonSize2,
+                symbolSize: symbolsSize,
+                color1: topRowButtonColor1,
+                color2: topRowButtonColor2,
+                buttonSymbol: CalcButton.add
+            )
+        }
+        .padding()
         
-        ButtonView(
-            buttonWidthSize1: 77,
-            buttonWidthSize2: 70,
-            buttonHeightSize1: 77,
-            buttonHeightSize2: 70,
-            symbolSize: 40,
-            color1: topRowButtonColor1,
-            color2: topRowButtonColor2,
-            buttonSymbol: "-"
-        )
-            .padding()
     }
 }

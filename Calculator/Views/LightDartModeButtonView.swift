@@ -37,7 +37,8 @@ struct LightDartModeButtonView: View {
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing)
               )
-              .clipShape(RoundedRectangle(cornerRadius: 23))
+              .clipShape(RoundedRectangle(cornerRadius: 18))
+              .shadow(color: shadowColor, radius: 4, x: 0, y: 3)
             Rectangle()
                 .fill(
                     LinearGradient(
@@ -46,7 +47,7 @@ struct LightDartModeButtonView: View {
                         endPoint: .bottomTrailing)
                 )
                 .frame(width: buttonWidthSize2, height: buttonHeightSize2)
-                .clipShape(RoundedRectangle(cornerRadius: 23))
+                .clipShape(RoundedRectangle(cornerRadius: 18))
                 .padding()
             
             Image(systemName: buttonSymbol)
