@@ -30,13 +30,20 @@ struct ButtonView: View {
         return value.contains("IMG") ? nil : value
     }
     
+    var isIPadSize1: CGFloat {
+        return UIDevice.isIPad ? buttonSize1 / 2 : buttonSize1
+    }
+    var isIPadSize2: CGFloat {
+        return UIDevice.isIPad ? buttonSize2 / 2 : buttonSize2
+    }
+    
     
     
     var body: some View {
         ZStack {
             Rectangle()
               .foregroundColor(.clear)
-              .frame(width: buttonSize1, height: buttonSize1)
+              .frame(width: isIPadSize1, height: isIPadSize1)
               .background(
                 LinearGradient(
                     colors: [color2, color1],
@@ -52,18 +59,23 @@ struct ButtonView: View {
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing)
                 )
-                .frame(width: buttonSize2, height: buttonSize2)
+                .frame(width: isIPadSize2, height: isIPadSize2)
                 .clipShape(RoundedRectangle(cornerRadius: 23))
                 .padding()
             
-            Text(text ?? "")
-                .font(.system(size: symbolSize))
-                .foregroundStyle(buttonTextColor)
-                .multilineTextAlignment(.center)
-            Image(systemName: systemImage ?? "")
-                .resizable()
-                .frame(width: symbolSize, height: symbolSize)
-                .foregroundStyle(buttonTextColor)
+            if text != nil {
+                Text(text ?? "")
+                                .font(.system(size: symbolSize))
+                                .foregroundStyle(buttonTextColor)
+                                .multilineTextAlignment(.center)
+            }else{
+                Image(systemName: systemImage ?? "")
+                                .resizable()
+                                .frame(width: symbolSize, height: symbolSize)
+                                .foregroundStyle(buttonTextColor)
+            }
+            
+            
             
         }
     }

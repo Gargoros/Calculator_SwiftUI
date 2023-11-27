@@ -17,6 +17,12 @@ struct LightDartModeButtonView: View {
     var buttonSymbol: String {
         return lightMode ? "lightbulb" : "lightbulb.fill"
     }
+    var isIPadSize1: CGFloat {
+        return UIDevice.isIPad ? buttonSize1 / 2 : buttonSize1
+    }
+    var isIPadSize2: CGFloat {
+        return UIDevice.isIPad ? buttonSize2 / 2 : buttonSize2
+    }
     
     
     
@@ -24,7 +30,7 @@ struct LightDartModeButtonView: View {
         ZStack {
             Rectangle()
               .foregroundColor(.clear)
-              .frame(width: buttonSize1, height: buttonSize1)
+              .frame(width: isIPadSize1, height: isIPadSize1)
               .background(
                 LinearGradient(
                     colors: [color2, color1],
@@ -40,7 +46,7 @@ struct LightDartModeButtonView: View {
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing)
                 )
-                .frame(width: buttonSize2, height: buttonSize2)
+                .frame(width: isIPadSize2, height: isIPadSize2)
                 .clipShape(RoundedRectangle(cornerRadius: 18))
                 .padding()
             

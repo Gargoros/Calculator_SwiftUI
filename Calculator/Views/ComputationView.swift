@@ -12,6 +12,12 @@ struct ComputationView: View {
     let currentComputation: String
     let mainResult: String
     
+    var currenSize: CGFloat {
+        return UIDevice.isIPad ? currentTextIPadSize : currentTextSize
+    }
+    var mainTextSize: CGFloat {
+        return UIDevice.isIPad ? mainResultTextIPadSize : mainResultTextSize
+    }
     var resultText: String {
         return mainResult.isEmpty ? "" : " = \(mainResult)"
     }
@@ -19,11 +25,11 @@ struct ComputationView: View {
     var body: some View {
         VStack(alignment: .trailing){
             Text(currentComputation)
-                .font(.system(size: currentTextSize))
+                .font(.system(size: currenSize))
                 .foregroundStyle(expressionsTextColor)
                 .fontWeight(.semibold)
             Text(resultText)
-                .font(.system(size: mainResultTextSize))
+                .font(.system(size: mainTextSize))
                 .foregroundStyle(resultTextColor)
                 .fontWeight(.bold)
         }

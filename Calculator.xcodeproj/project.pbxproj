@@ -23,6 +23,7 @@
 		8CA55D6B2B12373D00B6CDD5 /* ButtonsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA55D6A2B12373D00B6CDD5 /* ButtonsData.swift */; };
 		8CA55D6D2B124BA900B6CDD5 /* SizeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA55D6C2B124BA900B6CDD5 /* SizeConstants.swift */; };
 		8CA55D702B12642C00B6CDD5 /* StringHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA55D6F2B12642C00B6CDD5 /* StringHelperFunctions.swift */; };
+		8CCD9FE22B14F65200901ECA /* iPadSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD9FE12B14F65200901ECA /* iPadSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		8CA55D6A2B12373D00B6CDD5 /* ButtonsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsData.swift; sourceTree = "<group>"; };
 		8CA55D6C2B124BA900B6CDD5 /* SizeConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConstants.swift; sourceTree = "<group>"; };
 		8CA55D6F2B12642C00B6CDD5 /* StringHelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelperFunctions.swift; sourceTree = "<group>"; };
+		8CCD9FE12B14F65200901ECA /* iPadSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +78,13 @@
 		8C5840E02B0FE9DA00DF1D9C /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				8C5840E12B0FE9DA00DF1D9C /* CalculatorApp.swift */,
+				8CCD9FE02B14F5F300901ECA /* Extensions */,
 				8CA55D6E2B12640D00B6CDD5 /* Helper */,
 				8CA55D692B12372700B6CDD5 /* Data */,
 				8CA55D642B122E6A00B6CDD5 /* Models */,
 				8CA55D532B1115CD00B6CDD5 /* Constants */,
 				8CA55D502B110DF900B6CDD5 /* Views */,
-				8C5840E12B0FE9DA00DF1D9C /* CalculatorApp.swift */,
 				8C5840E52B0FE9DB00DF1D9C /* Assets.xcassets */,
 				8C5840E72B0FE9DB00DF1D9C /* Calculator.entitlements */,
 				8C5840E82B0FE9DB00DF1D9C /* Preview Content */,
@@ -143,6 +146,14 @@
 				8CA55D6F2B12642C00B6CDD5 /* StringHelperFunctions.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		8CCD9FE02B14F5F300901ECA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8CCD9FE12B14F65200901ECA /* iPadSupport.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 				8CA55D5B2B1122D200B6CDD5 /* ComputationView.swift in Sources */,
 				8CA55D6B2B12373D00B6CDD5 /* ButtonsData.swift in Sources */,
 				8CA55D522B110E0F00B6CDD5 /* ButtonView.swift in Sources */,
+				8CCD9FE22B14F65200901ECA /* iPadSupport.swift in Sources */,
 				8CA55D632B12232400B6CDD5 /* Enumerations.swift in Sources */,
 				8CA55D592B111CE400B6CDD5 /* LightDartModeButtonView.swift in Sources */,
 				8CA55D662B122E9200B6CDD5 /* CalcButtonModel.swift in Sources */,
@@ -370,8 +382,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -409,8 +420,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
