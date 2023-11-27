@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ComputationView: View {
     
-    @State var currentComputation: String
-    @State var mainResult: String
+    let currentComputation: String
+    let mainResult: String
     
-    let currentTextSize: CGFloat = 28.0
-    let mainResultTextSize: CGFloat = 56.0
+    var resultText: String {
+        return mainResult.isEmpty ? "" : " = \(mainResult)"
+    }
     
     var body: some View {
         VStack(alignment: .trailing){
@@ -21,7 +22,7 @@ struct ComputationView: View {
                 .font(.system(size: currentTextSize))
                 .foregroundStyle(expressionsTextColor)
                 .fontWeight(.semibold)
-            Text(" = \(mainResult)")
+            Text(resultText)
                 .font(.system(size: mainResultTextSize))
                 .foregroundStyle(resultTextColor)
                 .fontWeight(.bold)

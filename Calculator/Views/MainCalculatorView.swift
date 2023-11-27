@@ -25,6 +25,7 @@ struct MainCalculatorView: View {
                     LightDartModeButtonView(lightMode: $lightMode)
                     Spacer()
                 }
+                Spacer()
                 HStack {
                     Spacer()
                     ComputationView(
@@ -35,7 +36,6 @@ struct MainCalculatorView: View {
                 CalcButtonsView(
                     currentComputation: $currentComputation,
                     mainResult: $mainResult)
-                Spacer()
             }
         }
         .environment(\.colorScheme, colorScheme)
