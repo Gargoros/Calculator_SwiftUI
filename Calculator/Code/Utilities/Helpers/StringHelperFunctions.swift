@@ -1,18 +1,11 @@
-//
-//  StringHelperFunctions.swift
-//  Calculator
-//
-//  Created by MIKHAIL ZHACHKO on 25.11.23.
-//
 
 import Foundation
 
 ///
 ///Return last character
 ///Otherwise return empty string
-func getLastCharacter(string: String) -> String {
-    return string.isEmpty ? "" : String(string.last ?? " ")
-}
+func getLastCharacter(string: String) -> String {string.isEmpty ? "" : String(string.last ?? " ")}
+
 ///
 ///Return true if the last char of the string  is equal  to char
 ///Otherwise return false
@@ -33,12 +26,8 @@ func formatResult(value: Double) -> String {
 ///
 ///Return true if the last char of the string  is equal  to digit
 ///Otherwise return false
-func lastCharIsDigit(string: String) -> Bool{
-    return "0123456789".contains(getLastCharacter(string: string))
-}
-func lastCharIsDigitOrPercent(string: String) -> Bool{
-    return "0123456789%".contains(getLastCharacter(string: string))
-}
+func lastCharIsDigit(string: String) -> Bool{ "0123456789".contains(getLastCharacter(string: string)) }
+func lastCharIsDigitOrPercent(string: String) -> Bool{ "0123456789%".contains(getLastCharacter(string: string)) }
 func lastCharacterIsAnOperator(string: String) -> Bool{
     let lastChar = getLastCharacter(string: string)
     return operators.contains(lastChar)

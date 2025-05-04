@@ -1,11 +1,4 @@
-//
-//  SizeConstants.swift
-//  Calculator
-//
-//  Created by MIKHAIL ZHACHKO on 25.11.23.
-//
 
-import Foundation
 import SwiftUI
 
 let buttonSize1: CGFloat = UIScreen.main.bounds.width / 5

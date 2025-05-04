@@ -1,9 +1,3 @@
-//
-//  BackgroundColorView.swift
-//  Calculator
-//
-//  Created by MIKHAIL ZHACHKO on 24.11.23.
-//
 
 import SwiftUI
 
@@ -16,8 +10,4 @@ struct BackgroundColorView: View {
         .ignoresSafeArea()
         
     }
-}
-
-#Preview {
-    BackgroundColorView()
 }

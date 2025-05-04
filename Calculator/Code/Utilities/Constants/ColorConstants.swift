@@ -1,9 +1,3 @@
-//
-//  ColorConstants.swift
-//  Calculator
-//
-//  Created by MIKHAIL ZHACHKO on 24.11.23.
-//
 
 import SwiftUI
 
