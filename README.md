@@ -1,4 +1,28 @@
 # Calculator_SwiftUI
+Simple Calculator 
 
-![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-26 at 14 50 44](https://github.com/Gargoros/Calculator_SwiftUI/assets/42667303/2e748a5d-8914-4fc6-a603-1d221b8df7df)
-![Simulator Screenshot - iPhone SE (3rd generation) - 2023-11-26 at 14 51 53](https://github.com/Gargoros/Calculator_SwiftUI/assets/42667303/601d8704-e36b-4489-879c-fac8cdb66bcf)
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/Gargoros/Calculator_SwiftUI/main/Screenshot/calc01.png"
+    alt="Simulator Screenshot 1"
+    width="200" height="450"
+    style="margin-right:10px;"
+  />
+  <img
+    src="https://raw.githubusercontent.com/Gargoros/Calculator_SwiftUI/main/Screenshot/calc02.png"
+    alt="Simulator Screenshot 2"
+    width="200" height="450"
+    style="margin-right:10px;"
+  />
+  <img
+    src="https://raw.githubusercontent.com/Gargoros/Calculator_SwiftUI/main/Screenshot/calc03.png"
+    alt="Simulator Screenshot 3"
+    width="200" height="450"
+    style="margin-right:10px;"
+  />
+  <img
+    src="https://raw.githubusercontent.com/Gargoros/Calculator_SwiftUI/main/Screenshot/calc04.png"
+    alt="Simulator Screenshot 4"
+    width="200" height="450"
+  />
+</p>
