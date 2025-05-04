@@ -1,6 +1,6 @@
 //
 //  CalculatorApp.swift
-//  Calculator
+//  Calculator  calculator
 //
 //  Created by MIKHAIL ZHACHKO on 23.11.23.
 //
